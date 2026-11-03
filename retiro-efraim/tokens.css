@@ -1,0 +1,17 @@
+/* Retiro Efraim — tokens da identidade visual */
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400;1,6..72,500&display=swap");
+
+:root {
+  /* Cores principais */
+  --efraim-videira: #1F4D3A; /* verde do ramo — cor primária */
+  --efraim-roma:    #B3283F; /* romã — o fruto, destaque */
+  --efraim-trigo:   #E2A93B; /* muro de pedra ao sol */
+  --efraim-fonte:   #5BA8A0; /* a fonte junto ao ramo */
+  /* Neutros */
+  --efraim-linho:   #EEF0E2; /* fundo claro, levemente esverdeado */
+  --efraim-tinta:   #14261D; /* texto e versões monocromáticas */
+
+  /* Tipografia */
+  --efraim-font-display: "Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --efraim-font-texto:   "Newsreader", Georgia, "Times New Roman", serif;
+}
