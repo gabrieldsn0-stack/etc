@@ -1,0 +1,19 @@
+{
+  "name": "agente-clinica",
+  "version": "0.1.0",
+  "description": "Agente de IA no WhatsApp que agenda consultas para clínicas e registra tudo numa planilha.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20.6"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/index.js",
+    "simular": "node --env-file-if-exists=.env src/simulador.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.4.0",
+    "google-auth-library": "^11.3.3"
+  }
+}

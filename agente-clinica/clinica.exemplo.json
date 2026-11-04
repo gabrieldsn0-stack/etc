@@ -1,0 +1,35 @@
+{
+  "nome": "Clínica Exemplo",
+  "assistente": "Ana",
+  "endereco": "Rua Exemplo, 123, sala 45, Centro, São Paulo/SP",
+  "telefone": "(11) 3333-3333",
+  "telefoneEquipe": "5511999999999",
+  "fuso": "America/Sao_Paulo",
+  "duracaoConsultaMin": 30,
+  "antecedenciaMinimaMin": 120,
+  "diasMaximosAFrente": 60,
+  "maxConsultasPorPaciente": 3,
+  "horarios": {
+    "seg": [["08:00", "12:00"], ["14:00", "18:00"]],
+    "ter": [["08:00", "12:00"], ["14:00", "18:00"]],
+    "qua": [["08:00", "12:00"], ["14:00", "18:00"]],
+    "qui": [["08:00", "12:00"], ["14:00", "18:00"]],
+    "sex": [["08:00", "12:00"], ["14:00", "17:00"]],
+    "sab": [["08:00", "12:00"]],
+    "dom": []
+  },
+  "bloqueios": ["2026-12-24", "2026-12-25", "2026-12-31", "2027-01-01"],
+  "procedimentos": [
+    { "nome": "Consulta", "duracaoMin": 30, "preco": "R$ 250 (particular)" },
+    { "nome": "Retorno", "duracaoMin": 30, "preco": "sem custo até 30 dias após a consulta" },
+    { "nome": "Limpeza de pele", "duracaoMin": 60, "preco": "R$ 180" }
+  ],
+  "convenios": ["Particular", "Unimed", "Bradesco Saúde"],
+  "informacoes": "Estacionamento conveniado no prédio ao lado. Chegar 15 minutos antes. Trazer documento com foto e carteirinha do convênio. Cancelamentos com pelo menos 24h de antecedência.",
+  "politicaPrivacidadeUrl": "",
+  "lembrete": {
+    "nomeModelo": "lembrete_consulta",
+    "idioma": "pt_BR",
+    "aPartirDe": "09:00"
+  }
+}
