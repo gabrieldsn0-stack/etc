@@ -1,3 +1,4 @@
+import { mesmoTelefone } from "./agenda/servico.js";
 import { lerJson, salvarJson } from "./arquivoJson.js";
 
 const HORA = 60 * 60 * 1000;
@@ -51,10 +52,11 @@ export class Conversas {
   }
 
   devolverParaAgente(telefone) {
-    if (this.dados[telefone]) {
-      delete this.dados[telefone].humanoAte;
-      this.dados[telefone].mensagens = [];
-      this.salvar();
+    // A equipe pode digitar o número com ou sem o nono dígito.
+    for (const chave of Object.keys(this.dados).filter((t) => mesmoTelefone(t, telefone))) {
+      delete this.dados[chave].humanoAte;
+      this.dados[chave].mensagens = [];
     }
+    this.salvar();
   }
 }

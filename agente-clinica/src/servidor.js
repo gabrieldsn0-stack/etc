@@ -36,8 +36,13 @@ export function criarServidor({ tokenVerificacao, segredoApp, aoReceber }) {
 
     if (req.method === "GET" && url.pathname === "/webhook") {
       const ok = url.searchParams.get("hub.mode") === "subscribe" && url.searchParams.get("hub.verify_token") === tokenVerificacao;
-      if (ok) res.writeHead(200, { "Content-Type": "text/plain" }).end(url.searchParams.get("hub.challenge") ?? "");
-      else res.writeHead(403).end();
+      if (ok) {
+        console.log("[webhook] verificado pela Meta");
+        res.writeHead(200, { "Content-Type": "text/plain" }).end(url.searchParams.get("hub.challenge") ?? "");
+      } else {
+        console.warn("[webhook] 403: token de verificação diferente do WHATSAPP_TOKEN_VERIFICACAO");
+        res.writeHead(403).end();
+      }
       return;
     }
 
@@ -50,6 +55,7 @@ export function criarServidor({ tokenVerificacao, segredoApp, aoReceber }) {
         return;
       }
       if (!assinaturaValida(corpo, req.headers["x-hub-signature-256"], segredoApp)) {
+        console.warn("[webhook] 401: assinatura inválida. Confira o WHATSAPP_SEGREDO_APP (chave secreta do app).");
         res.writeHead(401).end();
         return;
       }

@@ -29,3 +29,23 @@ test("extrai texto, botões e mensagens sem texto", () => {
   );
   assert.deepEqual(extrairMensagens({ entry: [{ changes: [{ value: { statuses: [{}] } }] }] }), []);
 });
+
+test("reenvia com o nono dígito quando a Meta recusa o número (erro 131030)", async (t) => {
+  const { WhatsApp, comNonoDigito } = await import("../src/whatsapp.js");
+  assert.equal(comNonoDigito("551188880000"), "5511988880000");
+  assert.equal(comNonoDigito("551133330000"), null); // fixo
+  assert.equal(comNonoDigito("5511988880000"), null);
+
+  const destinos = [];
+  t.mock.method(globalThis, "fetch", async (_url, opcoes) => {
+    const { to } = JSON.parse(opcoes.body);
+    destinos.push(to);
+    if (to === "551188880000") {
+      return new Response(JSON.stringify({ error: { code: 131030, message: "Recipient phone number not in allowed list" } }), { status: 400 });
+    }
+    return new Response(JSON.stringify({ messages: [{ id: "x" }] }), { status: 200 });
+  });
+  const whatsapp = new WhatsApp({ token: "t", idNumero: "1" });
+  await whatsapp.enviarTexto("551188880000", "oi");
+  assert.deepEqual(destinos, ["551188880000", "5511988880000"]);
+});

@@ -16,6 +16,22 @@ test("converte linhas da planilha, inclusive as digitadas à mão", () => {
   assert.equal(manual.status, "bloqueado");
 });
 
+test("cria a aba e o cabeçalho numa planilha nova", async () => {
+  const chamadas = [];
+  const planilha = new AgendaPlanilha({
+    planilhaId: "PLAN",
+    requisitar: async (opcoes) => {
+      chamadas.push(opcoes);
+      if (opcoes.url.includes("fields=sheets")) return { sheets: [{ properties: { title: "Página1" } }] };
+      return {};
+    },
+  });
+  await planilha.prepararCabecalho();
+  assert.deepEqual(chamadas[1].data, { requests: [{ addSheet: { properties: { title: "Agendamentos" } } }] });
+  assert.equal(chamadas.at(-1).method, "PUT");
+  assert.equal(chamadas.at(-1).data.values[0][0], "ID");
+});
+
 test("cria e atualiza a linha certa", async () => {
   const chamadas = [];
   const linhas = [["X1", "05/11/2026", "09:00", "30", "Maria", "55119", "Consulta", "", "agendado", "", ""]];

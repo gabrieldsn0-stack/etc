@@ -12,6 +12,8 @@ O cérebro é o Claude (Anthropic). A conexão com o WhatsApp usa a **API oficia
 
 ---
 
+> **Começando agora?** Siga o [PRIMEIRO-TESTE.md](PRIMEIRO-TESTE.md): é o passo a passo até o teste real com o seu celular. Em qualquer etapa, rode `npm run verificar` para conferir a configuração.
+
 ## 1. Testar no computador (10 minutos, sem WhatsApp)
 
 Você precisa do [Node.js](https://nodejs.org) 20 ou mais novo e de uma chave da API do Claude ([console.anthropic.com](https://console.anthropic.com) → API Keys).
@@ -90,7 +92,7 @@ Fora da janela de 24h desde a última mensagem do paciente, a Meta só deixa env
 - Corpo, por exemplo:
   > Olá, {{1}}! Passando para lembrar da sua consulta na {{5}} amanhã, {{2}} ({{3}}), às {{4}}. Se precisar remarcar ou cancelar, é só responder esta mensagem.
 
-A partir das 09:00 (campo `lembrete.aPartirDe`), o sistema envia o lembrete de todas as consultas do dia seguinte e marca a coluna *Lembrete enviado* na planilha. Quando o paciente responde, a assistente já consegue remarcar ou cancelar.
+Depois que o modelo for aprovado, coloque `"nomeModelo": "lembrete_consulta"` no `clinica.json`. Enquanto o campo estiver vazio, nenhum lembrete é enviado. A partir das 09:00 (campo `lembrete.aPartirDe`), o sistema envia o lembrete de todas as consultas do dia seguinte e marca a coluna *Lembrete enviado* na planilha. Quando o paciente responde, a assistente já consegue remarcar ou cancelar.
 
 O aviso de transferência para a equipe é um texto simples. Ele só chega se o número da equipe tiver conversado com o número da clínica nas últimas 24h. Se isso for um problema, crie também um modelo para esse aviso.
 

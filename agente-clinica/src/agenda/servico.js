@@ -9,6 +9,20 @@ export function apenasDigitos(telefone) {
   return String(telefone ?? "").replace(/\D/g, "");
 }
 
+/**
+ * Compara telefones ignorando formatação. No Brasil o WhatsApp às vezes
+ * identifica o celular sem o nono dígito (55 11 8888-0000 em vez de
+ * 55 11 98888-0000), então tratamos as duas formas como o mesmo número.
+ */
+export function mesmoTelefone(a, b) {
+  const semNono = (t) => {
+    const d = apenasDigitos(t);
+    return d.length === 13 && d.startsWith("55") && d[4] === "9" ? d.slice(0, 4) + d.slice(5) : d;
+  };
+  const x = semNono(a);
+  return x !== "" && x === semNono(b);
+}
+
 function novoId() {
   return randomBytes(3).toString("hex").toUpperCase();
 }
@@ -92,7 +106,7 @@ export class ServicoAgenda {
       .filter(
         (a) =>
           a.status === STATUS_AGENDADO &&
-          apenasDigitos(a.telefone) === tel &&
+          mesmoTelefone(a.telefone, tel) &&
           dataValida(a.data) &&
           diferencaEmDias(agora.data, a.data) >= 0,
       )

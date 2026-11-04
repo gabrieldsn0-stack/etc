@@ -42,6 +42,12 @@ function textoDaMensagem(m) {
   }
 }
 
+/** "551188880000" -> "5511988880000" para celulares brasileiros sem o nono dígito; null se não se aplica. */
+export function comNonoDigito(telefone) {
+  const d = String(telefone).replace(/\D/g, "");
+  return d.length === 12 && d.startsWith("55") && /[6-9]/.test(d[4]) ? `${d.slice(0, 4)}9${d.slice(4)}` : null;
+}
+
 export class WhatsApp {
   constructor({ token, idNumero, versaoApi = "v24.0" }) {
     this.token = token;
@@ -49,13 +55,31 @@ export class WhatsApp {
   }
 
   async enviar(corpo) {
+    try {
+      return await this.postar(corpo);
+    } catch (erro) {
+      // O WhatsApp pode identificar um celular brasileiro sem o nono dígito, e o
+      // número de teste da Meta só aceita o formato cadastrado (erro 131030).
+      // Nesse caso tentamos de novo com o 9.
+      const comNono = corpo.to && comNonoDigito(corpo.to);
+      if (erro.codigo === 131030 && comNono) return this.postar({ ...corpo, to: comNono });
+      throw erro;
+    }
+  }
+
+  async postar(corpo) {
     const resposta = await fetch(this.url, {
       method: "POST",
       headers: { Authorization: `Bearer ${this.token}`, "Content-Type": "application/json" },
       body: JSON.stringify({ messaging_product: "whatsapp", ...corpo }),
     });
     if (!resposta.ok) {
-      throw new Error(`WhatsApp respondeu ${resposta.status}: ${await resposta.text()}`);
+      const texto = await resposta.text();
+      const erro = new Error(`WhatsApp respondeu ${resposta.status}: ${texto}`);
+      try {
+        erro.codigo = JSON.parse(texto).error?.code;
+      } catch {}
+      throw erro;
     }
     return resposta.json();
   }

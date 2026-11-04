@@ -62,8 +62,18 @@ export class AgendaPlanilha {
     return `https://sheets.googleapis.com/v4/spreadsheets/${this.planilhaId}/values/${encodeURIComponent(caminho)}`;
   }
 
-  /** Cria o cabeçalho se a aba estiver vazia. */
+  /** Cria a aba (se não existir) e o cabeçalho (se a aba estiver vazia). */
   async prepararCabecalho() {
+    const base = `https://sheets.googleapis.com/v4/spreadsheets/${this.planilhaId}`;
+    const info = await this.requisitar({ url: `${base}?fields=sheets.properties.title` });
+    const abas = (info.sheets ?? []).map((s) => s.properties.title);
+    if (!abas.includes(this.aba)) {
+      await this.requisitar({
+        url: `${base}:batchUpdate`,
+        method: "POST",
+        data: { requests: [{ addSheet: { properties: { title: this.aba } } }] },
+      });
+    }
     const dados = await this.requisitar({ url: this.url(`${this.aba}!A1:${ULTIMA_COLUNA}1`) });
     if (dados.values?.length) return;
     await this.requisitar({

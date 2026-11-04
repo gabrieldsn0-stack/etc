@@ -53,3 +53,11 @@ test("lista consultas pendentes de lembrete", async () => {
   await agenda.marcarLembreteEnviado(agendamento.id);
   assert.equal((await agenda.pendentesDeLembrete("2026-11-05")).length, 0);
 });
+
+test("reconhece o mesmo celular com e sem o nono dígito", async () => {
+  const { mesmoTelefone } = await import("../src/agenda/servico.js");
+  assert.equal(mesmoTelefone("5511988880000", "551188880000"), true);
+  assert.equal(mesmoTelefone("+55 (11) 98888-0000", "5511988880000"), true);
+  assert.equal(mesmoTelefone("5511988880000", "5511977770000"), false);
+  assert.equal(mesmoTelefone("", ""), false);
+});

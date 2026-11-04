@@ -80,3 +80,12 @@ test("mensagens do mesmo paciente são respondidas em ordem", async () => {
   await Promise.all([atendimento.receber(msg("a", "primeira")), atendimento.receber(msg("b", "segunda"))]);
   assert.deepEqual(ordem, ["primeira", "segunda"]);
 });
+
+test("a equipe pode devolver usando o número com o nono dígito", async () => {
+  const { atendimento, chamadasAgente } = montar({ texto: "ok", mensagens: [], transferencia: "x" });
+  // O WhatsApp entrega o paciente sem o 9 e a equipe também sem o 9
+  await atendimento.receber(msg("m1", "oi", "551188880000"));
+  await atendimento.receber(msg("m2", "#devolver +55 11 98888-0000", "551199990000"));
+  await atendimento.receber(msg("m3", "oi de novo", "551188880000"));
+  assert.equal(chamadasAgente.length, 2);
+});

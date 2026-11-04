@@ -1,4 +1,4 @@
-import { apenasDigitos } from "./agenda/servico.js";
+import { apenasDigitos, mesmoTelefone } from "./agenda/servico.js";
 import { agoraNoFuso } from "./tempo.js";
 
 const MSG_SO_TEXTO = "Por enquanto eu só consigo ler mensagens de texto. Pode me escrever o que precisa? 🙂";
@@ -41,8 +41,12 @@ export function criarAtendimento({ agente, conversas, whatsapp, clinica, horasAt
   }
 
   async function processar(m) {
-    if (m.de === telefoneEquipe && m.texto && (await comandoDaEquipe(m.texto))) return;
-    if (conversas.emAtendimentoHumano(m.de)) return;
+    if (mesmoTelefone(m.de, telefoneEquipe) && m.texto && (await comandoDaEquipe(m.texto))) return;
+    if (conversas.emAtendimentoHumano(m.de)) {
+      console.log(`[mensagem] +${m.de}: em atendimento humano, o assistente não responde`);
+      return;
+    }
+    console.log(`[mensagem] +${m.de}: recebida (${m.tipo})`);
 
     whatsapp.marcarComoLida(m.id).catch(() => {});
     if (!m.texto?.trim()) {
@@ -67,7 +71,10 @@ export function criarAtendimento({ agente, conversas, whatsapp, clinica, horasAt
     }
 
     conversas.registrar(m.de, resultado.mensagens);
-    if (resultado.texto) await whatsapp.enviarTexto(m.de, resultado.texto);
+    if (resultado.texto) {
+      await whatsapp.enviarTexto(m.de, resultado.texto);
+      console.log(`[mensagem] +${m.de}: respondida`);
+    }
     if (resultado.transferencia) await transferir(m.de, m.nome, resultado.transferencia);
   }
 

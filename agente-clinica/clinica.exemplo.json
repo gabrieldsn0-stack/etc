@@ -28,7 +28,7 @@
   "informacoes": "Estacionamento conveniado no prédio ao lado. Chegar 15 minutos antes. Trazer documento com foto e carteirinha do convênio. Cancelamentos com pelo menos 24h de antecedência.",
   "politicaPrivacidadeUrl": "",
   "lembrete": {
-    "nomeModelo": "lembrete_consulta",
+    "nomeModelo": "",
     "idioma": "pt_BR",
     "aPartirDe": "09:00"
   }

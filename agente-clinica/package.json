@@ -10,6 +10,7 @@
   "scripts": {
     "start": "node --env-file-if-exists=.env src/index.js",
     "simular": "node --env-file-if-exists=.env src/simulador.js",
+    "verificar": "node --env-file-if-exists=.env src/verificar.js",
     "test": "node --test"
   },
   "dependencies": {
