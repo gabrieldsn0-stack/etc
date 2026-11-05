@@ -1,0 +1,42 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="estilo-cnct.css">
+<style>
+.bokeh{position:absolute;inset:-80px;filter:blur(70px);background:
+ radial-gradient(circle at 15% 10%,#C29B27 0 9%,transparent 18%),radial-gradient(circle at 55% 5%,#F6E3A1 0 7%,transparent 15%),
+ radial-gradient(circle at 85% 18%,#7D9230 0 10%,transparent 20%),radial-gradient(circle at 10% 45%,#8E5A1A 0 12%,transparent 24%),
+ radial-gradient(circle at 25% 85%,#5E7F25 0 12%,transparent 22%),radial-gradient(circle at 45% 92%,#A3BFD9 0 8%,transparent 16%),
+ radial-gradient(circle at 70% 80%,#7D9230 0 10%,transparent 20%),radial-gradient(circle at 95% 70%,#C29B27 0 8%,transparent 16%),
+ linear-gradient(160deg,#4B4A22,#2E3D14 50%,#3D3016)}
+.bilhete{position:absolute;left:150px;top:560px;width:800px;height:420px;display:grid;grid-template-columns:1fr 200px;transform:rotate(-4deg);filter:drop-shadow(0 26px 30px rgba(0,0,0,.4))}
+.bilhete .corpo,.bilhete .canhoto{background:var(--papel);position:relative;
+ -webkit-mask:radial-gradient(circle 22px at 100% 0,transparent 98%,#000) top right/100% 51% no-repeat,radial-gradient(circle 22px at 100% 100%,transparent 98%,#000) bottom right/100% 51% no-repeat}
+.bilhete .canhoto{-webkit-mask:radial-gradient(circle 22px at 0 0,transparent 98%,#000) top left/100% 51% no-repeat,radial-gradient(circle 22px at 0 100%,transparent 98%,#000) bottom left/100% 51% no-repeat;border-left:4px dashed #CDBB98;display:grid;place-items:center}
+.faixa{height:76px;background:var(--folha);display:flex;align-items:center;justify-content:space-between;padding:0 34px;color:var(--papel);font:700 22px/1 var(--f-titulo);letter-spacing:.24em;text-transform:uppercase}
+.campos{display:grid;grid-template-columns:1fr 1fr;gap:26px 30px;padding:30px 34px}
+.campos div{display:grid;gap:6px}
+.campos small{font:500 16px/1 var(--f-titulo);letter-spacing:.22em;text-transform:uppercase;color:#7A6E55}
+.campos b{font:800 30px/1.05 "Inter Tight",sans-serif;letter-spacing:-0.04em;text-transform:uppercase;color:var(--pasto)}
+.canhoto .ano{font:800 92px/1 "Outfit",sans-serif;color:var(--bordado);letter-spacing:-0.04em;transform:rotate(-90deg)}
+</style>
+<div class="arte grao">
+  <div class="bokeh"></div>
+  <div class="abs" style="left:0;right:0;top:130px;display:grid;justify-items:center;gap:36px;text-align:center">
+    <span class="pilula">efraim</span>
+    <p class="tt" style="--s:100px">Sua passagem<br>já está na mão.</p>
+  </div>
+  <div class="bilhete">
+    <div class="corpo">
+      <div class="faixa"><span>Bilhete de embarque</span><span>Nº 026</span></div>
+      <div class="campos">
+        <div><small>Passageiro</small><b>Você</b></div>
+        <div><small>Destino</small><b>Retiro Efraim</b></div>
+        <div><small>Embarque</small><b>11 dez</b></div>
+        <div><small>Retorno</small><b>13 dez</b></div>
+        <div style="grid-column:span 2"><small>Bagagem</small><b>Bíblia, caderno e o coração aberto</b></div>
+      </div>
+    </div>
+    <div class="canhoto"><span class="ano">’26</span></div>
+  </div>
+  <p class="leve abs" style="left:110px;right:110px;top:1070px;text-align:center;font-size:32px">São três dias longe da correria para ser encontrado por Deus. Arrume a mala e venha.</p>
+  <div class="cnt" style="left:60px;bottom:40px;font-size:28px">Retiro<br>Efraim</div>
+  <div class="cnt" style="right:60px;bottom:40px;text-align:right;font-size:28px"><b>Dez</b><br><b>11, 12 e 13</b></div>
+</div>

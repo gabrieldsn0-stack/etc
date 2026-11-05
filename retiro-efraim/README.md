@@ -53,5 +53,5 @@ com as cores da identidade. Estilo em `estilo-cnct.css`.
 1. Faltam poucos dias / O que fazer antes do retiro?
 2. É hora de preparar o coração (celular tocando a Playlist Retiro Efraim '26)
 3. Ore pelo que ainda vai acontecer (troque o fundo por uma foto de adoração da igreja)
-4. O que tem alimentado o seu coração? (música, vídeo, conteúdo + telas de apps)
+4. Sua passagem já está na mão (bilhete de embarque do retiro)
 5. Preparar o seu coração é criar espaço (janela com a paisagem, Tiago 4:8)
