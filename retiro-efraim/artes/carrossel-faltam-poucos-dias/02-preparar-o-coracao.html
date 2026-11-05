@@ -1,35 +1,50 @@
-<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="carrossel.css">
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="estilo-cnct.css">
 <style>
-.cel{position:absolute;left:96px;top:250px;width:440px;height:880px;border-radius:64px;background:#0E140A;box-shadow:0 0 0 10px #2A2E26,0 0 0 12px #55594F,0 40px 70px rgba(0,0,0,.45);transform:rotate(-4deg);color:#EDE6D2;padding:30px 30px}
-.cel .ilha{position:absolute;top:18px;left:50%;width:130px;height:34px;border-radius:20px;background:#000;transform:translateX(-50%)}
-.cel .st{display:flex;justify-content:space-between;font:600 18px var(--f-titulo);padding:8px 14px 0}
-.cel .tit{text-align:center;margin-top:52px;font:500 18px/1.35 var(--f-titulo);color:#A9AE9C}
-.cel .tit b{display:block;color:#EDE6D2;font-weight:700}
-.letra{margin-top:30px;background:var(--folha);border-radius:18px;padding:26px 26px 22px;display:grid;gap:18px;box-shadow:0 10px 20px rgba(0,0,0,.3)}
-.letra .q{font:800 30px/1.18 var(--f-titulo);color:var(--manteiga)}
-.letra small{font:600 15px/1 var(--f-titulo);letter-spacing:.2em;text-transform:uppercase;color:#C9D3A8}
-.barra{margin:40px 8px 0;height:4px;border-radius:2px;background:#3A3F33;position:relative}.barra::before{content:"";position:absolute;inset:0 62% 0 0;background:#EDE6D2;border-radius:2px}.barra::after{content:"";position:absolute;left:38%;top:-5px;width:14px;height:14px;border-radius:50%;background:#EDE6D2}
-.ctrl{display:flex;justify-content:center;align-items:center;gap:46px;margin-top:40px}
-.ctrl svg{fill:#EDE6D2}
+.fundo{position:absolute;inset:0;background:radial-gradient(circle at 72% 30%,#5C8A26 0%,#2F6413 38%,#1D430B 75%,#15320A 100%)}
+.cel{position:absolute;left:82px;top:195px;width:465px;height:990px;border-radius:84px;background:#0B0D09;box-shadow:inset 0 0 0 4px #2B2E28,0 0 0 3px #45483F,0 30px 60px rgba(0,0,0,.45);padding:44px 52px;color:#EEE8D8;font-family:var(--f-titulo)}
+.cel .ilha{position:absolute;top:22px;left:50%;width:200px;height:52px;border-radius:0 0 28px 28px;background:#000;transform:translateX(-50%)}
+.st{display:flex;justify-content:space-between;align-items:center;font:600 22px var(--f-titulo);margin-top:30px}
+.st i{display:inline-block;width:40px;height:18px;border-radius:5px;background:#EEE8D8}
+.topo{text-align:center;margin-top:62px;font:400 20px/1.3 var(--f-titulo);color:#9A9C92}
+.topo b{display:block;font-weight:700;color:#C9C7BC;text-transform:uppercase;font-size:18px;letter-spacing:.06em}
+.capa{margin-top:40px;border-radius:12px;overflow:hidden;position:relative;height:340px;background:#1F360C url(../../fundos/pasto-feed.jpg) center/cover}
+.capa::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(0,0,0,.55))}
+.capa img{position:absolute;left:34px;top:40px;width:260px;z-index:1}
+.capa span{position:absolute;left:34px;bottom:30px;z-index:1;font:700 18px/1 var(--f-titulo);letter-spacing:.24em;text-transform:uppercase;color:var(--manteiga)}
+.faixa{margin-top:52px;display:grid;grid-template-columns:30px 1fr 30px;align-items:center;text-align:center}
+.faixa b{font:600 26px/1.2 var(--f-titulo)} .faixa small{display:block;font:400 18px/1.3 var(--f-titulo);color:#9A9C92;text-transform:uppercase}
+.barra{margin-top:38px;height:3px;background:#3A3D35;position:relative}.barra::before{content:"";position:absolute;left:0;top:0;bottom:0;width:38%;background:#EEE8D8}.barra::after{content:"";position:absolute;left:38%;top:-5px;width:13px;height:13px;border-radius:50%;background:#EEE8D8}
+.ctrl{display:flex;justify-content:space-between;align-items:center;margin-top:38px;padding:0 6px}
+.ctrl svg{fill:#EEE8D8;stroke:#EEE8D8}
 </style>
-<div class="arte">
-  <div class="fundo-papel"></div>
-  <div class="canto esq"><img src="../../logo/retiro-efraim-sem-tagline-verde.svg" alt=""></div><div class="canto dir escuro">Dez<br>11, 12 e 13</div>
+<div class="arte grao">
+  <div class="fundo"></div>
+  <div class="cnt" style="left:72px;top:60px">Retiro<br>Efraim</div>
+  <div class="cnt" style="right:72px;top:60px;text-align:right"><b>Dez</b><br><b>11, 12 e 13</b></div>
   <div class="cel">
     <div class="ilha"></div>
-    <div class="st"><span>9:41</span><span>●●● ▮</span></div>
-    <div class="tit">Tocando agora<b>Playlist Retiro Efraim ’26</b></div>
-    <div class="letra"><small>Salmo 23</small><span class="q">O Senhor é o meu pastor; nada me faltará. Ele me faz repousar em pastos verdejantes.</span></div>
+    <div class="st"><span>10:28</span><i></i></div>
+    <div class="topo"><b>Tocando da playlist</b>Retiro Efraim ’26</div>
+    <div class="capa"><img src="../../logo/retiro-efraim-completo-creme.svg" alt=""><span>Playlist</span></div>
+    <div class="faixa"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#EEE8D8" stroke-width="2"><path d="M5 12l5 5 9-10"/></svg><div><b>Retiro Efraim ’26</b><small>Casa de Oração Efraim</small></div><span style="font-size:28px;letter-spacing:2px">···</span></div>
     <div class="barra"></div>
     <div class="ctrl">
-      <svg width="34" height="34" viewBox="0 0 24 24"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg>
-      <svg width="96" height="96" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="none" stroke="#EDE6D2" stroke-width="3"/><rect x="17" y="15" width="4.5" height="18" rx="1"/><rect x="26.5" y="15" width="4.5" height="18" rx="1"/></svg>
-      <svg width="34" height="34" viewBox="0 0 24 24"><path d="M16 5h2v14h-2zM4 5v14l11-7z"/></svg>
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 7h4l10 10h4M3 17h4l10-10h4M18 4l3 3-3 3M18 14l3 3-3 3"/></svg>
+      <svg width="40" height="40" viewBox="0 0 24 24" stroke="none"><path d="M5 4h2.5v16H5zM20 4v16L8.5 12z"/></svg>
+      <svg width="104" height="104" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="none" stroke-width="2.6"/><rect x="16.5" y="14" width="5" height="20" rx="1" stroke="none"/><rect x="26.5" y="14" width="5" height="20" rx="1" stroke="none"/></svg>
+      <svg width="40" height="40" viewBox="0 0 24 24" stroke="none"><path d="M16.5 4H19v16h-2.5zM4 4v16l11.5-8z"/></svg>
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 11V8a2 2 0 0 1 2-2h13l-3-3M20 13v3a2 2 0 0 1-2 2H5l3 3"/></svg>
     </div>
   </div>
-  <div class="abs" style="left:590px;top:400px;width:430px;display:grid;gap:40px">
-    <p class="h escuro" style="--s:64px">É hora de preparar o coração pra tudo o que vamos viver.</p>
-    <div class="fio"></div>
+  <div class="abs" style="left:600px;top:415px;width:440px;display:grid;gap:44px;justify-items:start">
+    <p class="tt" style="--s:76px">É hora de<br>preparar<br>o coração<br>pra tudo o<br>que vamos<br>viver.</p>
+    <span class="pilula">efraim</span>
   </div>
-  <img class="patch" src="../../elementos/patch-nuvem-2026.svg" alt="" style="width:290px;right:70px;top:1010px;transform:rotate(9deg)">
+  <svg class="abs" style="left:640px;top:1010px;width:470px" viewBox="0 0 440 300">
+    <defs><linearGradient id="fone" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".55" stop-color="#E9E8E3"/><stop offset="1" stop-color="#A9AAA3"/></linearGradient>
+    <radialGradient id="cab" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".6" stop-color="#ECEBE6"/><stop offset="1" stop-color="#B2B3AC"/></radialGradient>
+    <filter id="sh"><feDropShadow dx="0" dy="14" stdDeviation="12" flood-color="#000" flood-opacity=".35"/></filter></defs>
+    <g filter="url(#sh)" transform="rotate(-24 120 120)"><rect x="96" y="120" width="44" height="210" rx="22" fill="url(#fone)"/><ellipse cx="120" cy="110" rx="62" ry="70" fill="url(#cab)"/><ellipse cx="100" cy="100" rx="14" ry="9" fill="#2A2B27" transform="rotate(-20 100 100)"/></g>
+    <g filter="url(#sh)" transform="rotate(28 360 60)"><rect x="346" y="40" width="40" height="230" rx="20" fill="url(#fone)"/><ellipse cx="366" cy="34" rx="56" ry="62" fill="url(#cab)"/></g>
+  </svg>
 </div>

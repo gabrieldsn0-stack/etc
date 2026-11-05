@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800&family=Montserrat:wght@300;400;700&family=Outfit:wght@800&display=swap");
+@import url("../efraim.css");
+/* Estilo da referência: título ultra-apertado em caixa-alta, cantos finos, pílula com a marca. */
+.tt { margin: 0; font: 800 var(--s, 96px)/0.9 "Inter Tight", "Arial Black", sans-serif; letter-spacing: -0.075em; text-transform: uppercase; color: var(--manteiga) }
+.cnt { position: absolute; font: 300 34px/1.12 var(--f-titulo); text-transform: uppercase; color: var(--manteiga); opacity: .85 }
+.cnt b { font-weight: 700; letter-spacing: .02em }
+.pilula { display: inline-flex; align-items: center; justify-content: center; height: 56px; padding: 0 40px; border: 3px solid var(--manteiga); border-radius: 40px;
+  font: 800 30px/1 "Outfit", sans-serif; letter-spacing: -0.02em; color: var(--manteiga); text-transform: lowercase }
+.leve { margin: 0; font: 300 36px/1.12 var(--f-titulo); text-transform: uppercase; color: var(--manteiga) }

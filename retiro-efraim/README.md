@@ -45,12 +45,13 @@ Depois de editar um HTML em `artes/`, abra no navegador e exporte o quadro `.art
 
 ## Carrossel "Faltam poucos dias"
 
-`artes/carrossel-faltam-poucos-dias/` — 5 slides 1080×1350 (HTML editável + `png/`):
+`artes/carrossel-faltam-poucos-dias/` — 5 slides 1080×1350 (HTML editável + `png/`).
+O slide 1 é a arte de papel do Efraim; os slides 2 a 5 seguem o estilo da referência enviada
+(títulos ultra-apertados em Inter Tight, cantos "RETIRO EFRAIM / DEZ 11, 12 E 13", pílula "efraim"),
+com as cores da identidade. Estilo em `estilo-cnct.css`.
 
 1. Faltam poucos dias / O que fazer antes do retiro?
-2. É hora de preparar o coração (celular tocando a playlist do retiro, Salmo 23)
-3. Ore pelo que ainda vai acontecer (semana de oração)
-4. O que tem alimentado o seu coração? (música, vídeos, conteúdo)
-5. Preparar o coração é criar espaço (janela com a paisagem, Tiago 4:8)
-
-Legenda sugerida: "FALTAM POUCOS DIAS! Arrasta pro lado e vem preparar o coração com a gente. 11, 12 e 13 de dezembro."
+2. É hora de preparar o coração (celular tocando a Playlist Retiro Efraim '26)
+3. Ore pelo que ainda vai acontecer (troque o fundo por uma foto de adoração da igreja)
+4. O que tem alimentado o seu coração? (música, vídeo, conteúdo + telas de apps)
+5. Preparar o seu coração é criar espaço (janela com a paisagem, Tiago 4:8)

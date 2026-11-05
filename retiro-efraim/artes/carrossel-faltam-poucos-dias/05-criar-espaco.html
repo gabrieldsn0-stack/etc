@@ -1,21 +1,20 @@
-<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="carrossel.css">
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="estilo-cnct.css">
 <style>
-.parede{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,#3A2611,#140C05 75%)}
-.janela{position:absolute;left:110px;top:150px;width:860px;height:1060px;border-radius:150px;padding:34px;background:linear-gradient(135deg,#B9844A,#5B3818 30%,#2B1A0A 60%,#8A5A2A);box-shadow:0 40px 80px rgba(0,0,0,.6),inset 0 2px 3px rgba(255,220,170,.5)}
-.vidro{position:relative;width:100%;height:100%;border-radius:120px;overflow:hidden;box-shadow:inset 0 0 0 6px #1E1207,inset 0 20px 60px rgba(0,0,0,.55)}
-.vidro img{width:100%;height:100%;object-fit:cover;filter:saturate(1.1) sepia(.18) brightness(.92)}
-.vidro::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,214,150,.28),transparent 40%,rgba(0,0,0,.35)),linear-gradient(115deg,transparent 30%,rgba(255,255,255,.14) 34%,transparent 40%);z-index:1}
-.vidro .txt{position:absolute;inset:0;z-index:2;display:grid;align-content:center;justify-items:center;gap:56px;padding:0 70px;text-align:center}
+.parede{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,#3B2A12,#120B04 80%)}
+.janela{position:absolute;left:90px;top:70px;width:900px;height:1210px;border-radius:120px;padding:40px;background:linear-gradient(140deg,#C89350,#6A4219 22%,#2C1A08 55%,#7A4E22 85%,#C08A48);box-shadow:0 30px 70px rgba(0,0,0,.7),inset 0 0 0 3px rgba(255,220,170,.25)}
+.vidro{position:relative;width:100%;height:100%;border-radius:90px;overflow:hidden;box-shadow:inset 0 0 0 5px #1A0F05,inset 0 24px 60px rgba(0,0,0,.6)}
+.vidro img{width:100%;height:100%;object-fit:cover;filter:saturate(1.05) sepia(.25) brightness(.9);transform:scaleX(1.25)}
+.vidro::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(255,206,140,.32),transparent 35%,rgba(20,12,4,.35)),radial-gradient(ellipse at 85% 30%,rgba(255,220,160,.35),transparent 40%)}
+.txt{position:absolute;inset:0;z-index:2;display:grid;align-content:center;justify-items:center;gap:60px;text-align:center;padding:0 40px}
 </style>
 <div class="arte grao">
   <div class="parede"></div>
   <div class="janela"><div class="vidro">
     <img src="../../fundos/paisagem-feed.jpg" alt="">
     <div class="txt">
-      <img src="../../logo/retiro-efraim-sem-tagline-creme.svg" alt="" style="width:190px;height:auto">
-      <p class="h claro" style="--s:70px;text-shadow:0 2px 18px rgba(0,0,0,.35)">Preparar o seu coração é criar espaço para viver tudo aquilo que Ele preparou para esses dias.</p>
-      <p class="corpo claro" style="font-size:26px">Aproximem-se de Deus, e ele se aproximará de vocês.<br>Tiago 4:8</p>
+      <span class="pilula">efraim</span>
+      <p class="tt" style="--s:96px;text-shadow:0 2px 20px rgba(0,0,0,.25)">Preparar o seu coração é criar espaço para viver tudo aquilo que Ele preparou para esses dias</p>
+      <p class="leve" style="font-size:30px">Aproximem-se de Deus e Ele se<br>aproximará de vocês. Tg 4:8</p>
     </div>
   </div></div>
-  <div class="canto dir claro" style="top:auto;bottom:50px;right:64px">Dez<br>11, 12 e 13</div>
 </div>
