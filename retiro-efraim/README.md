@@ -42,3 +42,15 @@ Depois de editar um HTML em `artes/`, abra no navegador e exporte o quadro `.art
 
 - Os fundos de pasto e a ovelha foram recortados do cartaz enviado. Se tiver a foto original em alta, troque `fundos/pasto-*.jpg` mantendo os nomes.
 - O logo da Casa de Oração foi extraído do cartaz; o til de "Oração" ficou fraco. Prefira o arquivo original da igreja.
+
+## Carrossel "Faltam poucos dias"
+
+`artes/carrossel-faltam-poucos-dias/` — 5 slides 1080×1350 (HTML editável + `png/`):
+
+1. Faltam poucos dias / O que fazer antes do retiro?
+2. É hora de preparar o coração (celular tocando a playlist do retiro, Salmo 23)
+3. Ore pelo que ainda vai acontecer (semana de oração)
+4. O que tem alimentado o seu coração? (música, vídeos, conteúdo)
+5. Preparar o coração é criar espaço (janela com a paisagem, Tiago 4:8)
+
+Legenda sugerida: "FALTAM POUCOS DIAS! Arrasta pro lado e vem preparar o coração com a gente. 11, 12 e 13 de dezembro."

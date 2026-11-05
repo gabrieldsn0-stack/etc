@@ -1,0 +1,10 @@
+@import url("../efraim.css");
+/* marcas de canto repetidas em todos os slides */
+.canto { position: absolute; top: 64px; font: 500 22px/1.25 var(--f-titulo); letter-spacing: .26em; text-transform: uppercase }
+.canto.esq { left: 64px } .canto.dir { right: 64px; text-align: right; font-weight: 700 }
+.canto img { width: 170px; display: block }
+.claro { color: var(--manteiga) } .escuro { color: var(--pasto) }
+.h { margin: 0; font: 800 var(--s, 72px)/1.02 var(--f-titulo); text-transform: uppercase; letter-spacing: -0.01em }
+.corpo { margin: 0; font: 400 30px/1.32 var(--f-titulo); text-transform: uppercase; letter-spacing: .04em }
+.fundo-papel { position: absolute; inset: 0; background: var(--papel);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.6' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .38 0 0 0 0 .25 0 0 0 .14 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23p)'/%3E%3C/svg%3E") }
