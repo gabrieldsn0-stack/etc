@@ -1,0 +1,36 @@
+/* Retiro Efraim '26 — base das artes. Cada arte é um quadro de tamanho fixo (feed 1080×1350, story 1080×1920). */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@800&family=Montserrat:wght@400;500;700;800&family=Lobster&display=swap");
+:root {
+  --pasto: #1F360C;   /* verde da sombra na grama */
+  --folha: #24500F;   /* verde da nota com clipe */
+  --capim: #7D9230;   /* grama ao sol */
+  --manteiga: #F6E3A1;/* creme do letreiro */
+  --papel: #F3E6D0;   /* papel das notas */
+  --bordado: #8E1210; /* vermelho dos patches */
+  --ouro: #C29B27;    /* clipe e fios */
+  --ceu: #A3BFD9;
+  --tinta: #16240A;
+  --f-marca: "Outfit", "Arial Black", sans-serif;
+  --f-titulo: "Montserrat", Arial, sans-serif;
+  --f-patch: "Lobster", cursive;
+}
+* { box-sizing: border-box }
+html, body { margin: 0; background: #222 }
+.arte { position: relative; width: 1080px; height: 1350px; overflow: hidden; font-family: var(--f-titulo); color: var(--tinta) }
+.arte.story { height: 1920px }
+.bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover }
+.grao::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E") }
+.abs { position: absolute }
+/* papel */
+.papel { position: absolute; background: var(--papel); box-shadow: 0 30px 60px rgba(0,0,0,.35), 0 4px 10px rgba(0,0,0,.2);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.6' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .38 0 0 0 0 .25 0 0 0 .12 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23p)'/%3E%3C/svg%3E") }
+/* nota verde com clipe */
+.nota { position: absolute; background: var(--folha); color: var(--papel); padding: 64px 52px 52px; font: 800 58px/1.08 var(--f-titulo);
+  text-transform: uppercase; box-shadow: 0 0 0 14px var(--papel), 0 24px 40px rgba(0,0,0,.35) }
+.nota .clipe { position: absolute; top: -48px; right: 56px; width: 62px }
+.titulo { font: 800 128px/0.98 var(--f-titulo); text-transform: uppercase; letter-spacing: -0.01em; margin: 0 }
+.fio { width: 170px; height: 6px; border-radius: 3px; background: var(--ouro) }
+.tag { font: 400 34px/1.3 var(--f-titulo); letter-spacing: .32em; text-transform: uppercase }
+.patch { position: absolute; filter: drop-shadow(0 8px 10px rgba(0,0,0,.25)) }
+.cordeiro { position: absolute; mix-blend-mode: multiply }

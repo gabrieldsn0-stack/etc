@@ -1,163 +1,121 @@
-<title>Retiro Efraim</title>
+<title>Retiro Efraim '26</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400;1,6..72,500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@800&family=Montserrat:wght@400;500;700;800&family=Lobster&display=swap">
 <style>
-/* Layout: manual de marca em faixas horizontais; a primeira em Videira abre com o logo negativo e o versículo-chave. */
+/* Layout: o manual é o próprio pasto. Fundo de grama escura, conteúdo em folhas de papel presas com clipe. Visual único (sem tema claro/escuro). */
 :root {
-  --videira: #1F4D3A; --roma: #B3283F; --trigo: #E2A93B; --fonte: #5BA8A0;
-  --linho: #EEF0E2; --tinta: #14261D;
-  --bg: var(--linho); --fg: var(--tinta); --muted: #4A5E52; --line: #CDD3BE; --surface: #F7F8F0;
-  --heading: var(--videira); --accent: var(--roma);
-  --display: "Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
-  --text: "Newsreader", Georgia, "Times New Roman", serif;
+  --pasto: #1F360C; --folha: #24500F; --capim: #7D9230; --manteiga: #F6E3A1;
+  --papel: #F3E6D0; --bordado: #8E1210; --ouro: #C29B27; --ceu: #A3BFD9; --tinta: #16240A;
+  --f-marca: "Outfit", "Arial Black", sans-serif;
+  --f-titulo: "Montserrat", Arial, sans-serif;
+  --f-patch: "Lobster", cursive;
+  color-scheme: dark;
 }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
-  --bg: #101E17; --fg: #E6E9DA; --muted: #9DB0A3; --line: #2A3F33; --surface: #17291F;
-  --heading: #E6E9DA; --accent: #E0566B; color-scheme: dark } }
-:root[data-theme="dark"] {
-  --bg: #101E17; --fg: #E6E9DA; --muted: #9DB0A3; --line: #2A3F33; --surface: #17291F;
-  --heading: #E6E9DA; --accent: #E0566B; color-scheme: dark }
-
 * { box-sizing: border-box }
-body { background: var(--bg); color: var(--fg); font: 400 1.125rem/1.6 var(--text) }
-.wrap { max-width: 1080px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)) }
-h1, h2, h3 { font-family: var(--display); color: var(--heading); text-wrap: balance; margin: 0 }
-h2 { font-weight: 800; font-size: clamp(1.9rem, 4vw, 2.75rem); line-height: 1.05; letter-spacing: -0.01em }
-h3 { font-weight: 600; font-size: 1.15rem }
+body { background: #142407; color: var(--manteiga); font: 400 1.05rem/1.6 var(--f-titulo) }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)) }
+img { display: block; max-width: 100% }
+h2 { font: 800 clamp(1.6rem, 4vw, 2.4rem)/1.05 var(--f-titulo); text-transform: uppercase; margin: 0; text-wrap: balance }
 p { margin: 0; max-width: 62ch }
-.label { font: 600 0.75rem/1 var(--display); letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent) }
-img { display: block }
+.eyebrow { font: 500 0.78rem/1 var(--f-titulo); letter-spacing: 0.32em; text-transform: uppercase; color: var(--ouro) }
 
-/* Abertura */
-.hero { background: #1F4D3A; color: #EEF0E2 }
-.hero .wrap { padding-block: clamp(48px, 9vw, 104px); display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(32px, 6vw, 72px); align-items: center }
-.hero img { width: 100%; max-width: 520px }
-.hero blockquote { margin: 0; display: grid; gap: 14px; border-left: 2px solid #E2A93B; padding-left: 22px }
-.hero blockquote p { font: italic 400 clamp(1.3rem, 2.4vw, 1.65rem)/1.4 var(--text) }
-.hero cite { font: 600 0.75rem/1 var(--display); letter-spacing: 0.2em; text-transform: uppercase; font-style: normal; color: #E2A93B }
+.hero { background: #1F360C url("fundos/pasto-faixa.jpg") center / cover; position: relative }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,36,7,.1), rgba(20,36,7,.75)) }
+.hero .wrap { position: relative; z-index: 1; padding-block: clamp(48px, 9vw, 110px) clamp(40px, 7vw, 80px); display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 40px; align-items: end }
+.hero .logo { width: min(560px, 100%) }
+.hero aside { display: grid; gap: 18px; justify-items: start }
+.hero aside p { font-size: 1.05rem; color: #E9DDB2 }
+.hero .casa { width: 92px }
+.dates { font: 400 1rem/1.4 var(--f-titulo); letter-spacing: .3em; text-transform: uppercase }
 
-section { padding-block: clamp(56px, 8vw, 96px); border-top: 1px solid var(--line) }
-section:first-of-type { border-top: 0 }
-.head { display: grid; gap: 12px; margin-bottom: 40px }
-.head p { color: var(--muted) }
+section { padding-block: clamp(52px, 8vw, 90px) }
+.head { display: grid; gap: 12px; margin-bottom: 36px }
+.head p { color: #D9D0A8 }
+
+.sheet { background: var(--papel); color: var(--tinta); border-radius: 2px; box-shadow: 0 24px 50px rgba(0,0,0,.4); padding: clamp(24px, 5vw, 52px); position: relative }
+.sheet h3 { font: 800 1.1rem/1.2 var(--f-titulo); text-transform: uppercase; color: var(--pasto); margin: 0 }
+.clip { position: absolute; top: -34px; right: 40px; width: 40px }
 
 /* Conceito */
-.anatomy { display: grid; grid-template-columns: minmax(0, 300px) 1fr; gap: 48px; align-items: center }
-.anatomy figure { margin: 0; background: #EEF0E2; border-radius: 4px; padding: 20px }
-.parts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 32px; margin: 0; padding: 0; list-style: none }
-.parts li { display: grid; gap: 6px; padding-top: 14px; border-top: 3px solid var(--c) }
-.parts strong { font: 800 1.1rem/1.2 var(--display); color: var(--heading) }
-.parts span { color: var(--muted); font-size: 1rem }
-.parts em { font-size: 0.95rem; color: var(--muted) }
+.concept { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 28px; align-items: start }
+.concept blockquote { margin: 0; font: 800 clamp(1.4rem, 3vw, 2rem)/1.15 var(--f-titulo); text-transform: uppercase; color: var(--pasto) }
+.concept cite { display: block; margin-top: 16px; font: 700 .78rem/1 var(--f-titulo); letter-spacing: .28em; color: var(--bordado); font-style: normal }
+.pillars { display: grid; gap: 18px; margin: 0; padding: 0; list-style: none }
+.pillars li { display: grid; gap: 4px; padding-left: 16px; border-left: 3px solid var(--ouro) }
+.pillars b { font-weight: 800; text-transform: uppercase; font-size: .9rem; letter-spacing: .04em }
 
-/* Versões */
-.versions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px }
-.tile { border-radius: 4px; padding: clamp(24px, 5vw, 48px); display: grid; gap: 28px; align-content: space-between; min-height: 240px }
-.tile img { max-height: 120px; width: auto; max-width: 100% }
-.tile.wide { grid-column: span 2 }
-.tile.wide img { max-height: 110px }
-.tile small { font: 600 0.72rem/1.3 var(--display); letter-spacing: 0.14em; text-transform: uppercase; opacity: .75 }
-.on-linho { background: #EEF0E2; color: #14261D; box-shadow: inset 0 0 0 1px var(--line) }
-.on-videira { background: #1F4D3A; color: #EEF0E2 }
-.on-trigo { background: #E2A93B; color: #14261D }
-.on-tinta { background: #14261D; color: #EEF0E2 }
+/* Logo */
+.logos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px }
+.logos figure { margin: 0; display: grid; gap: 12px; align-content: space-between; padding: 28px; min-height: 230px; border-radius: 2px }
+.logos figcaption { font: 500 .72rem/1.4 var(--f-titulo); letter-spacing: .16em; text-transform: uppercase; opacity: .8 }
+.on-pasto { background: #1F360C url("fundos/pasto-feed.jpg") center / cover; color: var(--manteiga) }
+.on-papel { background: var(--papel); color: var(--tinta) }
+.on-manteiga { background: var(--manteiga); color: var(--tinta) }
+.notes { margin-top: 20px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; color: #D9D0A8; font-size: .95rem }
+.notes b { color: var(--manteiga) }
 
 /* Cores */
-.swatches { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px }
-.sw { display: grid; gap: 10px }
-.chip { aspect-ratio: 3 / 4; max-width: 100%; border-radius: 4px; background: var(--c); box-shadow: inset 0 0 0 1px rgba(20, 38, 29, .12) }
-.sw b { font: 800 1rem/1.1 var(--display); color: var(--heading) }
-.sw code { font: 400 0.82rem/1.5 ui-monospace, "SF Mono", Menlo, monospace; color: var(--muted); font-variant-numeric: tabular-nums }
-.sw span { font-size: 0.92rem; color: var(--muted); line-height: 1.35 }
-.ratio { display: flex; height: 18px; border-radius: 3px; overflow: hidden; margin-top: 28px }
-.ratio div { background: var(--c); flex: var(--f) }
-.ratio-legend { font: 400 0.9rem/1.4 var(--text); color: var(--muted); margin-top: 10px }
+.swatches { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px }
+.sw { border-radius: 2px; padding: 18px; min-height: 150px; display: grid; align-content: end; gap: 2px; background: var(--c); color: var(--t); box-shadow: inset 0 0 0 1px rgba(246,227,161,.15) }
+.sw b { font: 800 1.05rem/1.2 var(--f-titulo); text-transform: uppercase }
+.sw code { font: 500 .82rem/1.5 ui-monospace, Menlo, monospace }
+.sw span { font-size: .85rem; opacity: .85 }
 
 /* Tipografia */
-.type { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px }
-.spec { background: var(--surface); border-radius: 4px; padding: 32px; display: grid; gap: 18px; align-content: start; min-width: 0 }
-.spec .big { font: 800 clamp(3.2rem, 8vw, 5.5rem)/0.95 var(--display); color: var(--heading); letter-spacing: -0.01em; overflow-wrap: anywhere }
-.spec .bigserif { font: italic 400 clamp(3rem, 7vw, 5rem)/1 var(--text); color: var(--heading) }
-.spec dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; margin: 0; font-size: 0.95rem }
-.spec dt { font: 600 0.72rem/1.9 var(--display); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted) }
-.spec dd { margin: 0 }
-.sample { margin-top: 16px; background: var(--surface); border-radius: 4px; padding: clamp(24px, 5vw, 48px); display: grid; gap: 14px }
-.sample .kicker { font: 600 0.8rem/1 var(--display); letter-spacing: 0.3em; text-transform: uppercase; color: var(--accent) }
-.sample .t { font: 800 clamp(2rem, 5vw, 3.4rem)/1 var(--display); color: var(--heading) }
-.sample .v { font: italic 400 1.25rem/1.5 var(--text) }
+.types { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px }
+.types .sheet { display: grid; gap: 14px; align-content: start }
+.types .s1 { font: 800 clamp(2.6rem, 5vw, 3.6rem)/.9 var(--f-marca); color: var(--pasto); letter-spacing: -0.03em }
+.types .s2 { font: 800 clamp(1.8rem, 3.6vw, 2.5rem)/1 var(--f-titulo); color: var(--pasto); text-transform: uppercase }
+.types .s2 small { display: block; font-weight: 400; font-size: .9rem; letter-spacing: .3em; margin-top: 10px }
+.types .s3 { font: 400 clamp(2.4rem, 4.6vw, 3.2rem)/1 var(--f-patch); color: var(--bordado) }
+.types p { font-size: .92rem; color: #3D4630 }
 
-/* Aplicações */
-.apps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px }
-.app { display: grid; gap: 12px; align-content: start }
-.app .stage { border-radius: 4px; background: var(--surface); aspect-ratio: 1; max-width: 100%; display: grid; place-items: center; padding: 20px; overflow: hidden }
-.app p { font-size: 0.95rem; color: var(--muted) }
+/* Elementos */
+.kit { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px }
+.kit figure { margin: 0; background: var(--papel); color: var(--tinta); border-radius: 2px; padding: 22px; display: grid; gap: 14px; align-content: space-between }
+.kit .img { display: grid; place-items: center; min-height: 170px }
+.kit .img img { max-height: 170px; width: auto }
+.kit figcaption { font-size: .88rem; line-height: 1.4 }
+.kit figcaption b { display: block; font-weight: 800; text-transform: uppercase; font-size: .82rem; letter-spacing: .06em; color: var(--pasto) }
+.demo-nota { background: var(--folha); color: var(--papel); font: 800 1.3rem/1.05 var(--f-titulo); text-transform: uppercase; padding: 26px 22px 20px; box-shadow: 0 0 0 7px var(--papel), 0 10px 18px rgba(0,0,0,.3); transform: rotate(-3deg); position: relative; width: 170px }
+.demo-nota img { position: absolute; top: -24px; right: 20px; width: 26px }
 
-.post { width: 86%; aspect-ratio: 1; max-width: 100%; background: #1F4D3A; color: #EEF0E2; display: grid; grid-template-rows: auto 1fr auto; padding: 8%; position: relative; overflow: hidden }
-.post .k { font: 600 clamp(0.5rem, 1.4vw, 0.7rem)/1 var(--display); letter-spacing: 0.3em; color: #E2A93B }
-.post .h { font: 800 clamp(1.4rem, 4vw, 2.4rem)/0.95 var(--display); align-self: center }
-.post .h i { font: italic 400 1em var(--text); color: #E2A93B }
-.post img { width: 34%; justify-self: end }
-.post .wall { position: absolute; left: 0; right: 0; bottom: 0; height: 6%; background: repeating-linear-gradient(90deg, #E2A93B 0 22%, #1F4D3A 22% 25%) }
-
-.badge { width: 58%; aspect-ratio: 54 / 86; max-width: 100%; background: #EEF0E2; color: #14261D; border-radius: 6px; box-shadow: 0 10px 24px rgba(20, 38, 29, .18); display: grid; grid-template-rows: 20% 1fr auto; overflow: hidden; position: relative }
-.badge::before { content: ""; position: absolute; top: 4%; left: 50%; width: 16%; height: 3%; transform: translateX(-50%); border-radius: 9px; background: #14261D; opacity: .25 }
-.badge .top { background: #1F4D3A }
-.badge .body { display: grid; align-content: center; justify-items: center; gap: 6px; padding: 8% }
-.badge .body img { width: 54%; margin-top: -30% }
-.badge .name { font: 800 clamp(1rem, 2.6vw, 1.5rem)/1 var(--display); color: #1F4D3A }
-.badge .role { font: 600 clamp(0.45rem, 1.2vw, 0.6rem)/1 var(--display); letter-spacing: 0.24em; text-transform: uppercase; color: #B3283F }
-.badge .foot { background: #E2A93B; padding: 6% 8%; font: italic 400 clamp(0.55rem, 1.3vw, 0.75rem)/1.3 var(--text); text-align: center }
-
-.band { width: 100%; display: grid; gap: 14px }
-.strap { height: clamp(34px, 6vw, 46px); border-radius: 999px; display: flex; align-items: center; gap: 10px; padding: 0 18px; font: 800 clamp(0.7rem, 1.8vw, 0.95rem)/1 var(--display); letter-spacing: 0.12em; white-space: nowrap; overflow: hidden }
-.strap img { height: 70% }
-.strap.s1 { background: #1F4D3A; color: #EEF0E2 }
-.strap.s2 { background: #B3283F; color: #EEF0E2 }
-.strap.s3 { background: #E2A93B; color: #14261D }
-.strap.s4 { background: #5BA8A0; color: #14261D }
+/* Artes */
+.gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)) minmax(0, .8fr); gap: 14px; align-items: start }
+.gallery figure { margin: 0; display: grid; gap: 10px }
+.gallery img { width: 100%; box-shadow: 0 14px 30px rgba(0,0,0,.4) }
+.gallery figcaption { font-size: .82rem; color: #D9D0A8; line-height: 1.4 }
+.gallery figcaption b { color: var(--manteiga); display: block }
 
 /* Regras */
-.rules { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px }
+.rules { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px }
+.rules ul { margin: 14px 0 0; padding-left: 1.1em; display: grid; gap: 8px; font-size: .97rem }
+.rules li::marker { color: var(--bordado) }
+.files { margin-top: 18px; font: 400 .8rem/1.8 ui-monospace, Menlo, monospace; white-space: pre; overflow-x: auto; background: rgba(22,36,10,.06); padding: 14px 16px; border-radius: 2px }
 .rules > div { min-width: 0 }
-.rules ul { margin: 14px 0 0; padding-left: 1.1em; display: grid; gap: 8px }
-.rules li::marker { color: var(--accent) }
-.dont { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 18px }
-.dont figure { margin: 0; display: grid; gap: 8px }
-.dont .box { background: #EEF0E2; border-radius: 4px; aspect-ratio: 1; max-width: 100%; display: grid; place-items: center; position: relative; overflow: hidden; box-shadow: inset 0 0 0 1px var(--line) }
-.dont .box img { width: 58% }
-.dont .box::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top right, transparent calc(50% - 1.5px), #B3283F calc(50% - 1.5px) calc(50% + 1.5px), transparent calc(50% + 1.5px)) }
-.dont figcaption { font-size: 0.88rem; color: var(--muted) }
-.files { margin-top: 18px; background: var(--surface); border-radius: 4px; padding: 20px 22px; font: 400 0.85rem/1.8 ui-monospace, "SF Mono", Menlo, monospace; overflow-x: auto; white-space: pre }
 
-footer { background: #EEF0E2; color: #4A5E52; border-top: 1px solid #CDD3BE }
-footer .wrap { padding-block: 32px; display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; align-items: center; font-size: 0.95rem }
-footer img { height: 40px }
+footer .wrap { padding-block: 40px; display: flex; flex-wrap: wrap; gap: 16px 28px; align-items: center; justify-content: space-between; color: #D9D0A8; font-size: .9rem; border-top: 1px solid rgba(246,227,161,.15) }
+footer img { width: 150px }
 
-@media (max-width: 860px) {
-  .hero .wrap, .anatomy, .type, .rules { grid-template-columns: minmax(0, 1fr) }
-  .swatches { grid-template-columns: repeat(3, minmax(0, 1fr)) }
-  .apps { grid-template-columns: 1fr }
-  .app .stage { aspect-ratio: 4 / 3 }
-  .post { width: auto; height: 90% }
-  .badge { width: auto; height: 92% }
+@media (max-width: 900px) {
+  .hero .wrap, .concept, .rules { grid-template-columns: minmax(0, 1fr) }
+  .logos, .types, .notes { grid-template-columns: minmax(0, 1fr) }
+  .swatches, .kit { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)) }
 }
-@media (max-width: 560px) {
-  .versions, .parts { grid-template-columns: 1fr }
-  .tile.wide { grid-column: auto }
-  .swatches { grid-template-columns: repeat(2, minmax(0, 1fr)) }
-  .dont { grid-template-columns: 1fr 1fr }
-}
+@media (max-width: 480px) { .kit { grid-template-columns: minmax(0, 1fr) } }
 </style>
 
 <header class="hero">
   <div class="wrap">
-    <img src="logo/efraim-logo-vertical-negativo.svg" alt="Logo do Retiro Efraim: um ramo com duas romãs passando por cima de um muro, junto a uma fonte">
-    <blockquote>
-      <p>José é um ramo frutífero, ramo frutífero junto à fonte; seus galhos se estendem sobre o muro.</p>
-      <cite>Gênesis 49:22</cite>
-    </blockquote>
+    <img class="logo" src="logo/retiro-efraim-completo-creme.svg" alt="retiro efraim '26 — Eu fui encontrado">
+    <aside>
+      <img class="casa" src="elementos/casa-de-oracao-efraim.png" alt="Casa de Oração Efraim">
+      <p>Identidade visual do retiro da Casa de Oração Efraim. Tudo aqui nasce do cartaz oficial: o pasto, a ovelha encontrada, o papel e os patches bordados.</p>
+      <span class="dates">11, 12 e 13 de dezembro</span>
+    </aside>
   </div>
 </header>
 
@@ -165,150 +123,124 @@ footer img { height: 40px }
 
   <section>
     <div class="head">
-      <span class="label">Conceito</span>
-      <h2>Fruto no lugar da aflição</h2>
-      <p>Efraim quer dizer <em>duplamente frutífero</em>. José deu esse nome ao segundo filho depois de anos de exílio e prisão: “Deus me fez próspero na terra da minha aflição” (Gn 41:52). O símbolo conta essa história em quatro elementos.</p>
+      <span class="eyebrow">Conceito</span>
+      <h2>Eu fui encontrado</h2>
     </div>
-    <div class="anatomy">
-      <figure><img src="logo/efraim-simbolo-cor.svg" alt="Símbolo do Retiro Efraim"></figure>
-      <ul class="parts">
-        <li style="--c:#E2A93B"><strong>O muro</strong><span>O limite, a dor, aquilo que parecia o fim da história.</span><em>Trigo</em></li>
-        <li style="--c:#1F4D3A"><strong>O ramo</strong><span>A vida que nasce junto ao muro e se estende por cima dele.</span><em>Videira</em></li>
-        <li style="--c:#B3283F"><strong>Duas romãs</strong><span>A fecundidade dobrada que dá nome a Efraim. A romã é o fruto bíblico da abundância.</span><em>Romã</em></li>
-        <li style="--c:#5BA8A0"><strong>A fonte</strong><span>O ramo cresce junto à água. A raiz está em Deus, não nas circunstâncias.</span><em>Fonte</em></li>
+    <div class="concept">
+      <div class="sheet">
+        <img class="clip" src="elementos/clipe-dourado.svg" alt="">
+        <blockquote>“Alegrai-vos comigo, porque já achei a minha ovelha perdida.”<cite>Lucas 15:6</cite></blockquote>
+      </div>
+      <ul class="pillars">
+        <li><b>O pasto</b>Grama ao sol com sombras longas de fim de tarde. É o lugar do encontro e o fundo de quase todas as peças.</li>
+        <li><b>A ovelha</b>Sempre sozinha e pequena no quadro. Ela é quem foi achada, então nunca vira mascote nem rebanho.</li>
+        <li><b>O papel e o bordado</b>Notas, clipes e patches de tecido trazem o lado de acampamento, feito à mão, de quem vai viver três dias juntos.</li>
       </ul>
     </div>
   </section>
 
   <section>
     <div class="head">
-      <span class="label">Logotipo</span>
-      <h2>Versões e fundos</h2>
-      <p>O logo tem três arranjos: símbolo sozinho, horizontal e vertical. Cada um existe em cor, negativo e monocromático. Escolha pelo fundo, nunca pelo gosto do momento.</p>
+      <span class="eyebrow">Logotipo</span>
+      <h2>retiro efraim ’26</h2>
+      <p>Letreiro em minúsculas, compacto, com o ano dentro de um círculo traçado à mão. A frase “Eu fui encontrado” tem a mesma largura de “efraim”.</p>
     </div>
-    <div class="versions">
-      <div class="tile on-linho wide"><img src="logo/efraim-logo-horizontal-cor.svg" alt="Logo horizontal em cores"><small>Horizontal · cor · fundos claros</small></div>
-      <div class="tile on-videira"><img src="logo/efraim-logo-vertical-negativo.svg" alt="Logo vertical negativo"><small>Vertical · negativo · Videira e fundos escuros</small></div>
-      <div class="tile on-trigo"><img src="logo/efraim-logo-vertical-mono-escuro.svg" alt="Logo vertical monocromático escuro"><small>Vertical · mono escuro · 1 cor, carimbo, bordado</small></div>
-      <div class="tile on-tinta"><img src="logo/efraim-simbolo-mono-claro.svg" alt="Símbolo monocromático claro"><small>Símbolo · mono claro · avatar, ícone, selo</small></div>
-      <div class="tile on-linho"><img src="logo/efraim-simbolo-cor.svg" alt="Símbolo em cores"><small>Símbolo · cor · favicon, adesivo, carimbo de página</small></div>
+    <div class="logos">
+      <figure class="on-pasto"><img src="logo/retiro-efraim-completo-creme.svg" alt="Logo completo creme"><figcaption>Completo · creme sobre o pasto</figcaption></figure>
+      <figure class="on-papel"><img src="logo/retiro-efraim-completo-verde.svg" alt="Logo completo verde"><figcaption>Completo · verde sobre papel</figcaption></figure>
+      <figure class="on-manteiga"><img src="logo/retiro-efraim-sem-tagline-vermelho.svg" alt="Logo sem frase em vermelho"><figcaption>Sem frase · vermelho bordado</figcaption></figure>
+    </div>
+    <div class="notes">
+      <p><b>Completo:</b> cartaz, capa, story de abertura. Sempre que houver espaço.</p>
+      <p><b>Sem frase:</b> assinatura no canto das artes, camiseta e crachá.</p>
+      <p><b>Só o nome:</b> quando o ’26 atrapalha, como em bordado pequeno e carimbo.</p>
     </div>
   </section>
 
   <section>
     <div class="head">
-      <span class="label">Cores</span>
-      <h2>Paleta do pomar</h2>
-      <p>Videira conduz; Linho dá respiro; Trigo e Fonte sustentam. Romã é o fruto: aparece pouco e sempre onde o olhar deve parar.</p>
+      <span class="eyebrow">Cores</span>
+      <h2>Tiradas do cartaz</h2>
+      <p>O verde e o creme dominam. O vermelho aparece só no bordado e em um número ou palavra de destaque por arte.</p>
     </div>
     <div class="swatches">
-      <div class="sw main"><div class="chip" style="--c:#1F4D3A"></div><b>Videira</b><code>#1F4D3A<br>RGB 31 77 58</code><span>Primária. Títulos, fundos, logo.</span></div>
-      <div class="sw main"><div class="chip" style="--c:#B3283F"></div><b>Romã</b><code>#B3283F<br>RGB 179 40 63</code><span>Destaque. Uma chamada por peça.</span></div>
-      <div class="sw"><div class="chip" style="--c:#E2A93B"></div><b>Trigo</b><code>#E2A93B<br>RGB 226 169 59</code><span>Apoio. Faixas e detalhes.</span></div>
-      <div class="sw"><div class="chip" style="--c:#5BA8A0"></div><b>Fonte</b><code>#5BA8A0<br>RGB 91 168 160</code><span>Apoio. Ícones e linhas.</span></div>
-      <div class="sw"><div class="chip" style="--c:#EEF0E2"></div><b>Linho</b><code>#EEF0E2<br>RGB 238 240 226</code><span>Fundo claro.</span></div>
-      <div class="sw"><div class="chip" style="--c:#14261D"></div><b>Tinta</b><code>#14261D<br>RGB 20 38 29</code><span>Texto corrido, versão mono.</span></div>
-    </div>
-    <div class="ratio" aria-hidden="true">
-      <div style="--c:#1F4D3A;--f:40"></div><div style="--c:#EEF0E2;--f:30"></div><div style="--c:#E2A93B;--f:12"></div><div style="--c:#5BA8A0;--f:8"></div><div style="--c:#14261D;--f:5"></div><div style="--c:#B3283F;--f:5"></div>
-    </div>
-    <p class="ratio-legend">Proporção sugerida numa peça: Videira 40 · Linho 30 · Trigo 12 · Fonte 8 · Tinta 5 · Romã 5.</p>
-  </section>
-
-  <section>
-    <div class="head">
-      <span class="label">Tipografia</span>
-      <h2>Uma voz firme, outra que conta</h2>
-      <p>Duas famílias gratuitas do Google Fonts. A grotesca carrega títulos e o logotipo; a serifada carrega textos e as Escrituras.</p>
-    </div>
-    <div class="type">
-      <div class="spec">
-        <span class="big">Aa Efraim</span>
-        <dl><dt>Família</dt><dd>Bricolage Grotesque</dd><dt>Pesos</dt><dd>ExtraBold 800 títulos · SemiBold 600 rótulos</dd><dt>Uso</dt><dd>Títulos curtos, logotipo, rótulos em caixa-alta espaçada</dd></dl>
-      </div>
-      <div class="spec">
-        <span class="bigserif">Aa fonte</span>
-        <dl><dt>Família</dt><dd>Newsreader</dd><dt>Estilos</dt><dd>Regular 400 · Itálico 400</dd><dt>Uso</dt><dd>Textos corridos, programação, versículos em itálico</dd></dl>
-      </div>
-    </div>
-    <div class="sample">
-      <span class="kicker">Sexta · noite de abertura</span>
-      <span class="t">Galhos sobre o muro</span>
-      <p class="v">“Deus me fez próspero na terra da minha aflição.” Gênesis 41:52</p>
+      <div class="sw" style="--c:#1F360C;--t:#F6E3A1"><b>Pasto</b><code>#1F360C</code><span>Sombra na grama, textos verdes</span></div>
+      <div class="sw" style="--c:#24500F;--t:#F3E6D0"><b>Folha</b><code>#24500F</code><span>Nota com clipe</span></div>
+      <div class="sw" style="--c:#F6E3A1;--t:#16240A"><b>Manteiga</b><code>#F6E3A1</code><span>Letreiro sobre o pasto</span></div>
+      <div class="sw" style="--c:#F3E6D0;--t:#16240A"><b>Papel</b><code>#F3E6D0</code><span>Folhas e fundo dos patches</span></div>
+      <div class="sw" style="--c:#8E1210;--t:#F3E6D0"><b>Bordado</b><code>#8E1210</code><span>Patches e um destaque</span></div>
+      <div class="sw" style="--c:#C29B27;--t:#16240A"><b>Ouro</b><code>#C29B27</code><span>Clipe e fio separador</span></div>
+      <div class="sw" style="--c:#7D9230;--t:#16240A"><b>Capim</b><code>#7D9230</code><span>Grama ao sol, apoio</span></div>
+      <div class="sw" style="--c:#A3BFD9;--t:#16240A"><b>Céu</b><code>#A3BFD9</code><span>Paisagem desfocada</span></div>
     </div>
   </section>
 
   <section>
     <div class="head">
-      <span class="label">Aplicações</span>
-      <h2>Como a marca aparece no retiro</h2>
-      <p>Exemplos de uso. O muro de tijolos pode virar faixa de rodapé nas peças; as romãs nunca saem do símbolo.</p>
+      <span class="eyebrow">Tipografia</span>
+      <h2>Três vozes, cada uma no seu lugar</h2>
     </div>
-    <div class="apps">
-      <div class="app">
-        <div class="stage">
-          <div class="post">
-            <span class="k">RETIRO EFRAIM</span>
-            <span class="h">Frutífero<br><i>na terra da</i><br>aflição</span>
-            <img src="logo/efraim-simbolo-negativo.svg" alt="">
-            <div class="wall"></div>
-          </div>
-        </div>
-        <p>Post de feed 1:1. Título em Bricolage, trecho em Newsreader itálico, muro como rodapé.</p>
-      </div>
-      <div class="app">
-        <div class="stage">
-          <div class="badge">
-            <div class="top"></div>
-            <div class="body"><img src="logo/efraim-simbolo-cor.svg" alt=""><span class="name">Nome do participante</span><span class="role">Equipe de louvor</span></div>
-            <div class="foot">“seus galhos se estendem sobre o muro”</div>
-          </div>
-        </div>
-        <p>Crachá. Cada equipe pode ganhar uma das cores de apoio na faixa inferior.</p>
-      </div>
-      <div class="app">
-        <div class="stage">
-          <div class="band">
-            <div class="strap s1"><img src="logo/efraim-simbolo-negativo.svg" alt="">EFRAIM · GN 49:22</div>
-            <div class="strap s2"><img src="logo/efraim-simbolo-mono-claro.svg" alt="">EQUIPE · ROMÃ</div>
-            <div class="strap s3"><img src="logo/efraim-simbolo-mono-escuro.svg" alt="">EQUIPE · TRIGO</div>
-            <div class="strap s4"><img src="logo/efraim-simbolo-mono-escuro.svg" alt="">EQUIPE · FONTE</div>
-          </div>
-        </div>
-        <p>Pulseiras por equipe, usando as cores da paleta como nomes de grupo.</p>
-      </div>
+    <div class="types">
+      <div class="sheet"><span class="s1">retiro<br>efraim</span><h3>Outfit ExtraBold</h3><p>Só no letreiro e em números grandes, em minúsculas, com espaço entre letras apertado.</p></div>
+      <div class="sheet"><span class="s2">Faltam poucos dias<small>Eu fui encontrado</small></span><h3>Montserrat</h3><p>ExtraBold em caixa-alta para títulos e notas. Regular bem espaçada para frases curtas e datas.</p></div>
+      <div class="sheet"><span class="s3">Retiro Efraim</span><h3>Lobster</h3><p>Só dentro dos patches bordados. Nunca em texto corrido nem em títulos.</p></div>
     </div>
   </section>
 
   <section>
     <div class="head">
-      <span class="label">Uso</span>
-      <h2>Regras para não perder o fruto</h2>
+      <span class="eyebrow">Elementos</span>
+      <h2>Kit de montagem</h2>
+      <p>As peças se combinam como uma colagem: papel sobre o fundo, nota verde presa com clipe, um patch colado na borda e, quando couber, a ovelha.</p>
     </div>
-    <div class="rules">
+    <div class="kit">
+      <figure><div class="img"><img src="elementos/patch-oval-retiro-efraim.svg" alt="Patch oval"></div><figcaption><b>Patch oval</b>Assinatura principal nas artes de papel.</figcaption></figure>
+      <figure><div class="img"><img src="elementos/patch-nuvem-2026.svg" alt="Patch nuvem 2026"></div><figcaption><b>Patch nuvem 2026</b>Para stories e peças de data.</figcaption></figure>
+      <figure><div class="img"><img src="elementos/patch-arco-ovelha.svg" alt="Patch arco com ovelha"></div><figcaption><b>Patch da ovelha</b>Versículos, devocionais e brindes.</figcaption></figure>
+      <figure><div class="img"><div class="demo-nota">O que levar?<img src="elementos/clipe-dourado.svg" alt=""></div></div><figcaption><b>Nota com clipe</b>Pergunta ou chamada curta, até 4 linhas.</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="head">
+      <span class="eyebrow">Artes</span>
+      <h2>Primeiras peças</h2>
+      <p>Prontas em PNG na pasta <code>artes/png</code>. Para mudar o texto, edite o HTML com o mesmo nome em <code>artes/</code>.</p>
+    </div>
+    <div class="gallery">
+      <figure><img src="previa/01-cartaz.jpg" alt="Cartaz"><figcaption><b>Cartaz</b>Feed 1080×1350</figcaption></figure>
+      <figure><img src="previa/02-contagem.jpg" alt="Contagem regressiva"><figcaption><b>Contagem</b>Troque o número a cada dia</figcaption></figure>
+      <figure><img src="previa/03-versiculo.jpg" alt="Versículo"><figcaption><b>Versículo</b>Lucas 15:6</figcaption></figure>
+      <figure><img src="previa/04-o-que-levar.jpg" alt="O que levar"><figcaption><b>O que levar</b>Lista com checagem</figcaption></figure>
+      <figure><img src="previa/05-story-inscricoes.jpg" alt="Story inscrições"><figcaption><b>Story</b>1080×1920</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="sheet rules">
+      <img class="clip" src="elementos/clipe-dourado.svg" alt="">
       <div>
         <h3>Faça</h3>
         <ul>
-          <li>Deixe espaço livre ao redor do logo igual a duas romãs.</li>
-          <li>Símbolo com no mínimo 16 mm impresso ou 48 px na tela.</li>
-          <li>Logo horizontal com no mínimo 35 mm ou 140 px.</li>
-          <li>Em fundo de foto, use a versão mono clara ou escura, a que tiver mais contraste.</li>
+          <li>Um patch por arte, colado na borda do papel, levemente girado.</li>
+          <li>Papel e nota sempre com sombra, como objetos reais.</li>
+          <li>Ovelha pequena, no canto, olhando para quem vê.</li>
+          <li>Vermelho só em um destaque por arte.</li>
         </ul>
-        <div class="files">logo/efraim-simbolo-{cor|negativo|mono-escuro|mono-claro}.svg
-logo/efraim-logo-horizontal-{…}.svg
-logo/efraim-logo-vertical-{…}.svg
-tokens.css</div>
+        <div class="files">logo/       letreiro em SVG (creme, verde, vermelho)
+elementos/  patches, clipe, ovelhas, logo da igreja
+fundos/     pasto e paisagem (feed e story)
+artes/      modelos em HTML + PNG prontos</div>
       </div>
       <div>
-        <h3>Não faça</h3>
-        <div class="dont">
-          <figure><div class="box"><img src="logo/efraim-simbolo-cor.svg" alt="" style="transform:scaleX(1.5)"></div><figcaption>Esticar ou achatar</figcaption></figure>
-          <figure><div class="box"><img src="logo/efraim-simbolo-cor.svg" alt="" style="filter:hue-rotate(150deg)"></div><figcaption>Trocar as cores</figcaption></figure>
-          <figure><div class="box"><img src="logo/efraim-simbolo-cor.svg" alt="" style="transform:rotate(-18deg)"></div><figcaption>Girar</figcaption></figure>
-          <figure><div class="box"><img src="logo/efraim-simbolo-cor.svg" alt="" style="filter:drop-shadow(4px 6px 3px rgba(0,0,0,.5))"></div><figcaption>Aplicar sombra</figcaption></figure>
-          <figure><div class="box" style="background:#5BA8A0"><img src="logo/efraim-simbolo-cor.svg" alt=""></div><figcaption>Cor sobre fundo sem contraste</figcaption></figure>
-          <figure><div class="box"><img src="logo/efraim-simbolo-cor.svg" alt="" style="opacity:.35"></div><figcaption>Usar transparente</figcaption></figure>
-        </div>
+        <h3>Evite</h3>
+        <ul>
+          <li>Trocar a Outfit do letreiro por outra fonte.</li>
+          <li>Letreiro em caixa-alta ou com contorno.</li>
+          <li>Fundos lisos sem textura de grama ou papel.</li>
+          <li>Mais de três elementos colados na mesma arte.</li>
+          <li>Lobster fora dos patches.</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -316,7 +248,7 @@ tokens.css</div>
 
 <footer>
   <div class="wrap">
-    <img src="logo/efraim-logo-horizontal-cor.svg" alt="Retiro Efraim">
-    <span>Identidade visual · Retiro Efraim</span>
+    <img src="logo/retiro-efraim-sem-tagline-creme.svg" alt="retiro efraim '26">
+    <span>Casa de Oração Efraim · 11, 12 e 13 de dezembro</span>
   </div>
 </footer>

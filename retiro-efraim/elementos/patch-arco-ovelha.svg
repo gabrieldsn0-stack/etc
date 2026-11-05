@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-14 -10 328 374" role="img" aria-label="Patch bordado ovelha no pasto"><title>Patch bordado ovelha no pasto</title><defs>
+<pattern id="cetimC" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect width="5" height="5" fill="#F0DFA8"/><rect width="5" height="1.4" fill="#fff" opacity=".13"/><rect y="2.6" width="5" height=".8" fill="#000" opacity=".08"/></pattern>
+<pattern id="linhaC" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(-50)"><rect width="4" height="4" fill="#C29B27"/><rect width="4" height="1.3" fill="#fff" opacity=".22"/><rect y="2.4" width="4" height="1" fill="#000" opacity=".2"/></pattern>
+<filter id="relevoC" x="-10%" y="-10%" width="120%" height="130%"><feGaussianBlur in="SourceAlpha" stdDeviation="3"/><feOffset dy="4"/><feComponentTransfer><feFuncA type="linear" slope=".45"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="fioC"><feTurbulence type="fractalNoise" baseFrequency="1.6" numOctaves="2" seed="3"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .22 0"/><feComposite in2="SourceGraphic" operator="in"/><feMerge><feMergeNode in="SourceGraphic"/><feMergeNode/></feMerge></filter>
+</defs><g filter="url(#relevoC)">
+<path d="M0 310V150.0A150.0 150.0 0 0 1 300 150.0V310Q300 340 270 340H30Q0 340 0 310Z" fill="url(#linhaC)" stroke="#C29B27" stroke-width="2"/>
+<path d="M0 310V150.0A150.0 150.0 0 0 1 300 150.0V310Q300 340 270 340H30Q0 340 0 310Z" fill="url(#cetimC)" transform="translate(150.0 170.0) scale(.9) translate(-150.0 -170.0)"/>
+<path d="M0 310V150.0A150.0 150.0 0 0 1 300 150.0V310Q300 340 270 340H30Q0 340 0 310Z" fill="none" stroke="#C29B27" stroke-width="2.2" stroke-dasharray="6 4" opacity=".75" transform="translate(150.0 170.0) scale(.86) translate(-150.0 -170.0)"/>
+<g filter="url(#fioC)"><clipPath id="arcoclip"><path d="M0 310V150.0A150.0 150.0 0 0 1 300 150.0V310Q300 340 270 340H30Q0 340 0 310Z" transform="translate(150.0 170.0) scale(.84) translate(-150.0 -170.0)"/></clipPath>
+<g clip-path="url(#arcoclip)">
+<rect width="300" height="340" fill="#A3BFD9"/><rect width="300" height="340" fill="url(#cetimC)" opacity=".35"/>
+<path d="M0 205Q70 150 150 182T300 168V340H0Z" fill="#5E7F25"/>
+<path d="M0 240Q90 200 170 230T300 222V340H0Z" fill="#24500F"/>
+<g transform="translate(108 196)">
+<g fill="#F3E6D0" stroke="#D9C9A8" stroke-width="2"><circle cx="20" cy="22" r="18"/><circle cx="42" cy="14" r="18"/><circle cx="64" cy="20" r="17"/><circle cx="54" cy="36" r="17"/><circle cx="28" cy="38" r="17"/></g>
+<path d="M28 50v22M40 52v22M56 50v22M66 48v22" stroke="#16240A" stroke-width="6" stroke-linecap="round"/>
+<ellipse cx="80" cy="20" rx="13" ry="16" fill="#16240A"/><ellipse cx="70" cy="9" rx="7" ry="4" fill="#16240A" transform="rotate(-25 70 9)"/>
+<circle cx="84" cy="16" r="2.4" fill="#F3E6D0"/></g>
+<circle cx="214" cy="96" r="22" fill="#F6E3A1"/>
+</g></g></g></svg>

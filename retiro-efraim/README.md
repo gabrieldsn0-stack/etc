@@ -1,54 +1,44 @@
-# Retiro Efraim — Identidade Visual
+# Retiro Efraim '26 — Identidade Visual
 
-> "José é um ramo frutífero, ramo frutífero junto à fonte; seus galhos se estendem sobre o muro." — Gênesis 49:22
->
-> "Deus me fez próspero na terra da minha aflição." — Gênesis 41:52
+Casa de Oração Efraim · 11, 12 e 13 de dezembro · tema **Eu fui encontrado** (Lucas 15:6).
+Tudo parte do cartaz oficial: pasto com sombras, a ovelha sozinha, papel, nota verde com clipe e patches bordados.
 
-**Efraim** significa *duplamente frutífero*. José deu esse nome ao filho depois de anos de prisão e exílio:
-o fruto veio justamente no lugar da dor. A identidade traduz isso em quatro elementos.
+Abra `index.html` no navegador para ver o manual completo.
 
-| Elemento | Cor | Significado |
-|---|---|---|
-| Muro | Trigo `#E2A93B` | o limite, a aflição — aquilo que parecia o fim |
-| Ramo | Videira `#1F4D3A` | a vida que nasce do muro e passa por cima dele |
-| Duas romãs | Romã `#B3283F` | a fecundidade dobrada, o fruto de Efraim |
-| Fonte | Fonte `#5BA8A0` | a fonte junto à qual o ramo cresce (Gn 49:22) |
+## Pastas
 
-## Arquivos
-
-```
-logo/efraim-simbolo-{cor|negativo|mono-escuro|mono-claro}.svg
-logo/efraim-logo-horizontal-{…}.svg
-logo/efraim-logo-vertical-{…}.svg
-tokens.css     cores e fontes como variáveis CSS
-index.html     manual da marca (abrir no navegador)
-```
-
-- **cor** — sobre fundos claros (Linho, branco)
-- **negativo** — sobre Videira ou fundos escuros
-- **mono-escuro / mono-claro** — uma cor só: carimbo, bordado, serigrafia de 1 cor, documentos
-
-Os textos dos logos estão convertidos em curvas, então os SVGs abrem iguais em qualquer programa.
+| Pasta | Conteúdo |
+|---|---|
+| `logo/` | letreiro "retiro efraim '26" em SVG: `completo`, `sem-tagline`, `so-nome` × `creme`, `verde`, `vermelho` (texto em curvas) |
+| `elementos/` | patches bordados (oval, nuvem 2026, arco com ovelha), clipe dourado, ovelha no pasto, cordeiro no papel, logo da Casa de Oração (PNG transparente) |
+| `fundos/` | pasto e paisagem desfocada, em feed (1080×1350) e story (1080×1920) |
+| `artes/` | modelos em HTML (edite o texto) + `artes/png/` com as artes prontas |
 
 ## Cores
 
-| Nome | HEX | RGB | Uso |
-|---|---|---|---|
-| Videira | `#1F4D3A` | 31 77 58 | cor primária, textos grandes, fundos |
-| Romã | `#B3283F` | 179 40 63 | destaque pontual, chamadas, datas |
-| Trigo | `#E2A93B` | 226 169 59 | apoio, ilustrações, faixas |
-| Fonte | `#5BA8A0` | 91 168 160 | apoio, detalhes, ícones |
-| Linho | `#EEF0E2` | 238 240 226 | fundo claro |
-| Tinta | `#14261D` | 20 38 29 | texto corrido, versão mono |
+| Nome | HEX | Uso |
+|---|---|---|
+| Pasto | `#1F360C` | sombra da grama, títulos verdes |
+| Folha | `#24500F` | nota com clipe |
+| Manteiga | `#F6E3A1` | letreiro sobre o pasto |
+| Papel | `#F3E6D0` | folhas, fundo dos patches |
+| Bordado | `#8E1210` | patches e um destaque por arte |
+| Ouro | `#C29B27` | clipe e fio separador |
+| Capim | `#7D9230` | apoio |
+| Céu | `#A3BFD9` | paisagem |
 
-## Tipografia (Google Fonts, gratuitas)
+## Fontes (Google Fonts)
 
-- **Bricolage Grotesque** ExtraBold — títulos e o logotipo. Em caixa-alta, com espaçamento largo para rótulos curtos (ex.: `RETIRO`).
-- **Newsreader** — textos corridos e versículos (itálico para citações bíblicas).
+- **Outfit ExtraBold**: só o letreiro e números grandes, em minúsculas
+- **Montserrat**: ExtraBold caixa-alta para títulos e notas; Regular espaçada para frases e datas
+- **Lobster**: só dentro dos patches
 
-## Regras rápidas
+## Gerar os PNGs de novo
 
-- Área de proteção: deixe ao redor do logo um espaço livre igual à altura de uma romã ×2.
-- Tamanho mínimo: símbolo com 16 mm (impresso) / 48 px (tela); logo horizontal com 35 mm / 140 px.
-- Não distorcer, não girar, não trocar as cores dos elementos, não aplicar sombra nem contorno.
-- Romã é a cor de destaque: use pouco, em uma chamada por peça.
+Depois de editar um HTML em `artes/`, abra no navegador e exporte o quadro `.arte`
+(1080×1350 ou 1080×1920), ou rode um screenshot com Playwright.
+
+## Observações
+
+- Os fundos de pasto e a ovelha foram recortados do cartaz enviado. Se tiver a foto original em alta, troque `fundos/pasto-*.jpg` mantendo os nomes.
+- O logo da Casa de Oração foi extraído do cartaz; o til de "Oração" ficou fraco. Prefira o arquivo original da igreja.
